@@ -22,9 +22,10 @@ dokku letsencrypt:cron-job --add
 Specifically for FreshRSS:
 ```bash
 dokku apps:create freshrss
-dokku storage:mount freshrss /apps/freshrss:/var/www/FreshRSS
+dokku storage:mount freshrss /apps/freshrss/data:/var/www/FreshRSS/data
+dokku storage:mount freshrss /apps/freshrss/extensions:/var/www/FreshRSS/extensions
 
-cd /apps && mkdir ./freshrss && chown nobody freshrss
+cd /apps && mkdir -p ./freshrss/data && mkdir -p ./freshrss/extensions && chown nobody freshrss
 
 # App needs to be deployed once before calling this
 # dokku proxy:ports-set freshrss http:80:80
