@@ -27,7 +27,7 @@ dokku storage:mount freshrss /apps/freshrss:/var/www/FreshRSS
 cd /apps && mkdir ./freshrss && chown nobody freshrss
 
 # App needs to be deployed once before calling this
-dokku proxy:ports-set freshrss http:80:8080
+# dokku proxy:ports-set freshrss http:80:80
 dokku domains:remove freshrss freshrss.fdlo.ch freshrss.vps.fdlo.ch
 dokku domains:add freshrss rss.vps.fdlo.ch
 
