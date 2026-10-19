@@ -1,6 +1,6 @@
 # Extensions are installed by placing them into the mounted volume
 
-FROM freshrss/freshrss:1.30.0-alpine
+FROM freshrss/freshrss:1.30.2-alpine
 
 EXPOSE 80
 
